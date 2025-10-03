@@ -4,8 +4,8 @@
 #include <assert.h>
 #include "my_stack.h"
 
-const size_t CAPACITY = 2;
-
+const size_t CAPACITY = 10;
+// x^2-5*x+6 = 0
 typedef enum
 {
     START_PROGRAM,
@@ -39,6 +39,7 @@ int main()
 {
     stack_s stk = {};
     StackCtor(&stk, CAPACITY);
+    stk.data = NULL;
 
     // obrabotka vvoda:
     command_t command = START_PROGRAM;
